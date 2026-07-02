@@ -94,6 +94,41 @@ body {
   margin-bottom: 1.5rem;
   font-size: 1rem;
 }
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.settings-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.time-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.time-btn {
+  background: #1e1f22;
+  color: var(--muted);
+  border: 1px solid #33343a;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.time-btn.selected {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
 .category-list {
   display: flex;
   flex-wrap: wrap;
@@ -152,6 +187,10 @@ body {
 }
 .word.flash-skip {
   color: var(--skip);
+}
+.word.countdown {
+  font-size: clamp(4rem, 22vw, 10rem);
+  color: var(--accent);
 }
 .game-hint {
   width: 100%;

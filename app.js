@@ -1,12 +1,16 @@
 // ChaCha — minimal charades. Static, no build step, landscape-only.
 //
-// Flow: category picker -> 60s timed round (swipe up = skip, down = got it)
-// -> results screen. Everything runs client-side against pre-generated decks
-// under /decks, so no network is needed once a round has started.
+// Flow: category picker -> 5s "get ready" countdown -> timed round
+// (swipe up = skip, down = got it) -> results screen. Everything runs
+// client-side against pre-generated decks under /decks, so no network is
+// needed once a round has started.
 
-const ROUND_SECONDS = 60;
+const DEFAULT_SECONDS = 120;
+const TIME_OPTIONS = [60, 90, 120, 180, 240, 280];
+const READY_COUNTDOWN = 5; // seconds of prep time before the first word
 const SWIPE_THRESHOLD = 60; // px of vertical travel to count as a swipe
 const CATEGORIES_URL = "categories.json";
+const TIME_STORAGE_KEY = "chacha.roundSeconds";
 
 const el = (id) => document.getElementById(id);
 
@@ -39,6 +43,30 @@ function shuffle(arr) {
   return a;
 }
 
+// ---- Settings: round length (persisted) ----
+function loadRoundSeconds() {
+  const saved = parseInt(localStorage.getItem(TIME_STORAGE_KEY), 10);
+  return TIME_OPTIONS.includes(saved) ? saved : DEFAULT_SECONDS;
+}
+
+let roundSeconds = loadRoundSeconds();
+
+function renderTimeOptions() {
+  const box = el("time-options");
+  box.innerHTML = "";
+  for (const secs of TIME_OPTIONS) {
+    const btn = document.createElement("button");
+    btn.className = "time-btn" + (secs === roundSeconds ? " selected" : "");
+    btn.textContent = `${secs}s`;
+    btn.addEventListener("click", () => {
+      roundSeconds = secs;
+      localStorage.setItem(TIME_STORAGE_KEY, String(secs));
+      renderTimeOptions();
+    });
+    box.appendChild(btn);
+  }
+}
+
 // ---- Round state ----
 const state = {
   deck: [],
@@ -46,8 +74,10 @@ const state = {
   score: 0,
   got: [],
   skipped: [],
-  timeLeft: ROUND_SECONDS,
+  timeLeft: DEFAULT_SECONDS,
   timerId: null,
+  countdownId: null,
+  counting: false, // true during the pre-round "get ready" countdown
   lastCategory: null,
 };
 
@@ -76,18 +106,45 @@ async function startRound(category) {
     return;
   }
 
+  clearInterval(state.timerId);
+  clearInterval(state.countdownId);
+
   state.deck = shuffle(words);
   state.index = 0;
   state.score = 0;
   state.got = [];
   state.skipped = [];
-  state.timeLeft = ROUND_SECONDS;
+  state.timeLeft = roundSeconds;
   state.lastCategory = category;
 
   updateHud();
-  showCurrentWord();
+  el("timer").textContent = roundSeconds; // show full time while getting ready
   show("game");
-  startTimer();
+  runReadyCountdown(() => {
+    showCurrentWord();
+    startTimer();
+  });
+}
+
+// "Get ready" prep countdown before the first word is revealed.
+function runReadyCountdown(done) {
+  state.counting = true;
+  const word = el("word");
+  word.classList.add("countdown");
+  let n = READY_COUNTDOWN;
+  word.textContent = n;
+  state.countdownId = setInterval(() => {
+    n -= 1;
+    if (n > 0) {
+      word.textContent = n;
+    } else {
+      clearInterval(state.countdownId);
+      state.countdownId = null;
+      word.classList.remove("countdown");
+      state.counting = false;
+      done();
+    }
+  }, 1000);
 }
 
 function startTimer() {
@@ -127,8 +184,13 @@ function advance() {
   }
 }
 
+// Ignore actions during the prep countdown or after time is up.
+function roundActive() {
+  return !state.counting && state.timeLeft > 0;
+}
+
 function markGotIt() {
-  if (state.timeLeft <= 0) return;
+  if (!roundActive()) return;
   state.got.push(currentWord());
   state.score += 1;
   updateHud();
@@ -137,7 +199,7 @@ function markGotIt() {
 }
 
 function markSkip() {
-  if (state.timeLeft <= 0) return;
+  if (!roundActive()) return;
   state.skipped.push(currentWord());
   updateHud();
   advance();
@@ -212,4 +274,5 @@ function tryLockLandscape() {
 }
 document.addEventListener("click", tryLockLandscape, { once: true });
 
+renderTimeOptions();
 loadCategories();
