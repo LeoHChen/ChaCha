@@ -30,33 +30,31 @@ body {
   display: none !important;
 }
 
-/* Orientation gate: visible only in portrait. */
+/* Orientation gate: only shown in portrait WHILE a round is in progress.
+   Category selection and the results screen work in any orientation. */
 #rotate-gate {
   display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  text-align: center;
+  padding: 2rem;
+}
+.rotate-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: spin 2.5s ease-in-out infinite;
+}
+.rotate-inner p {
+  font-size: 1.2rem;
+  color: var(--muted);
 }
 @media (orientation: portrait) {
-  #rotate-gate {
+  body.playing #rotate-gate {
     display: flex;
-    position: fixed;
-    inset: 0;
-    z-index: 100;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg);
-    text-align: center;
-    padding: 2rem;
-  }
-  #app {
-    display: none;
-  }
-  .rotate-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    animation: spin 2.5s ease-in-out infinite;
-  }
-  .rotate-inner p {
-    font-size: 1.2rem;
-    color: var(--muted);
   }
 }
 @keyframes spin {
@@ -155,6 +153,25 @@ body {
 #screen-game {
   justify-content: space-between;
   padding: 1rem 1.5rem;
+  position: relative;
+}
+.btn-exit {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.8rem;
+  z-index: 5;
+  background: #2a2b30;
+  color: var(--fg);
+  border: 1px solid #33343a;
+  border-radius: 10px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-exit:active {
+  background: var(--skip);
+  border-color: var(--skip);
 }
 .game-hud {
   width: 100%;

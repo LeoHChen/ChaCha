@@ -19,6 +19,12 @@ import { dirname, join } from "node:path";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const DECKS_DIR = join(ROOT, "decks");
 const WORDS_PER_DECK = 100;
+// Per-category overrides for decks that should be larger than the default.
+const DECK_SIZES = {
+  "Chinese": 500,
+  "Spanish": 300,
+  "Colleges": 200,
+};
 const MODEL = "claude-haiku-4-5-20251001";
 
 const force = process.argv.includes("--force");
@@ -42,14 +48,16 @@ async function exists(path) {
 }
 
 async function generateWords(client, category) {
+  const target = DECK_SIZES[category] ?? WORDS_PER_DECK;
+  const maxTokens = Math.min(8192, Math.max(2048, target * 14));
   const message = await client.messages.create({
     model: MODEL,
-    max_tokens: 4096,
+    max_tokens: maxTokens,
     messages: [
       {
         role: "user",
         content:
-          `Generate exactly ${WORDS_PER_DECK} words or short phrases for a game of charades ` +
+          `Generate exactly ${target} words or short phrases for a game of charades ` +
           `in the category "${category}". Each item must be well-known, fun to act out or ` +
           `describe, and family-friendly. Prefer single words or two-word phrases. ` +
           `Respond with ONLY a JSON array of strings, no commentary, no code fences.`,
@@ -78,7 +86,7 @@ async function generateWords(client, category) {
     if (!word || seen.has(key)) continue;
     seen.add(key);
     words.push(word);
-    if (words.length >= WORDS_PER_DECK) break;
+    if (words.length >= target) break;
   }
   if (words.length === 0) throw new Error(`No usable words returned for "${category}"`);
   return words;

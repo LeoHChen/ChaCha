@@ -20,6 +20,26 @@
     "Amherst", "Williams", "Swarthmore", "Wellesley", "Pomona",
     "Bowdoin", "Middlebury", "Colgate", "Bates", "Colby",
     "Baylor", "TCU", "SMU", "Tulane", "Pepperdine",
-    "Clemson", "Auburn", "University of Alabama", "LSU", "University of Kentucky"
+    "Clemson", "Auburn", "University of Alabama", "LSU", "University of Kentucky",
+    "EPFL", "Nanyang Technological University", "University of Hong Kong", "Hong Kong University of Science and Technology", "Chinese University of Hong Kong",
+    "Fudan University", "Shanghai Jiao Tong University", "Zhejiang University", "University of Science and Technology of China", "Nanjing University",
+    "Wuhan University", "Kyoto University", "Osaka University", "Tokyo Institute of Technology", "Tohoku University",
+    "Nagoya University", "Kyushu University", "Hokkaido University", "KAIST", "Yonsei University",
+    "Korea University", "University of Manchester", "King's College London", "University of Bristol", "University of Warwick",
+    "University of Glasgow", "University of Birmingham", "University of Leeds", "University of Sheffield", "University of Nottingham",
+    "University of Southampton", "Durham University", "University of St Andrews", "Queen Mary University of London", "Delft University of Technology",
+    "University of Amsterdam", "Leiden University", "Utrecht University", "Erasmus University Rotterdam", "KU Leuven",
+    "Ghent University", "Technical University of Munich", "LMU Munich", "Humboldt University of Berlin", "Free University of Berlin",
+    "RWTH Aachen", "University of Freiburg", "University of Göttingen", "Karolinska Institute", "KTH Royal Institute of Technology",
+    "Lund University", "Uppsala University", "University of Copenhagen", "University of Helsinki", "University of Oslo",
+    "École Polytechnique", "Sciences Po", "PSL University", "University of Zurich", "University of Geneva",
+    "University of Vienna", "Trinity College Dublin", "University of Queensland", "Monash University", "University of New South Wales",
+    "University of Western Australia", "University of Adelaide", "University of Auckland", "University of Waterloo", "McMaster University",
+    "University of Alberta", "Université de Montréal", "Queen's University", "Western University", "University of Calgary",
+    "IIT Bombay", "IIT Delhi", "Indian Institute of Science", "Hebrew University of Jerusalem", "Technion",
+    "Tel Aviv University", "Lomonosov Moscow State University", "University of São Paulo", "National Taiwan University", "Pontifical Catholic University of Chile",
+    "University of Buenos Aires", "University of Cape Town", "University of Malaya", "King Abdulaziz University", "University of Bologna",
+    "Sapienza University of Rome", "Politecnico di Milano", "University of Barcelona", "Autonomous University of Madrid", "University of Lisbon",
+    "Aarhus University", "University of Groningen", "Wageningen University", "University of Bern", "University of Basel"
   ]
 }

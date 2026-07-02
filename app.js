@@ -32,6 +32,8 @@ function show(name) {
   for (const [key, node] of Object.entries(screens)) {
     node.classList.toggle("hidden", key !== name);
   }
+  // Only force landscape while a round is on screen (see styles.css).
+  document.body.classList.toggle("playing", name === "game");
 }
 
 function shuffle(arr) {
@@ -263,6 +265,16 @@ document.addEventListener("keydown", (e) => {
   else if (e.key === "ArrowDown") markGotIt();
 });
 
+// Abort an in-progress round and return to the category picker.
+function abortGame() {
+  clearInterval(state.timerId);
+  clearInterval(state.countdownId);
+  state.countdownId = null;
+  state.counting = false;
+  show("menu");
+}
+
+el("btn-exit").addEventListener("click", abortGame);
 el("btn-again").addEventListener("click", () => startRound(state.lastCategory));
 el("btn-menu").addEventListener("click", () => show("menu"));
 
