@@ -153,21 +153,18 @@ body {
 #screen-game {
   justify-content: space-between;
   padding: 1rem 1.5rem;
-  position: relative;
 }
 .btn-exit {
-  position: absolute;
-  top: 0.6rem;
-  left: 0.8rem;
-  z-index: 5;
   background: #2a2b30;
   color: var(--fg);
-  border: 1px solid #33343a;
+  border: 1px solid #4a4b52;
   border-radius: 10px;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.9rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+  touch-action: manipulation;
+  flex-shrink: 0;
 }
 .btn-exit:active {
   background: var(--skip);
@@ -213,6 +210,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   color: var(--muted);
   font-size: 0.9rem;
 }

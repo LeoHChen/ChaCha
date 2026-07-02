@@ -283,21 +283,12 @@ function abortGame() {
   show("menu");
 }
 
-// Exit requires a double-tap (or double-click) so it can't be triggered by an
-// accidental single touch during play. Uses click events so it works with both
-// mouse and touch (native dblclick is unreliable on touch screens).
-const DOUBLE_TAP_MS = 450;
-let lastExitTap = 0;
+// Single tap on the bottom Exit button aborts the round. The swipe handlers
+// ignore touches that start on this button (see onExitButton), so a tap here
+// never registers as skip/got-it.
 el("btn-exit").addEventListener("click", (e) => {
-  e.preventDefault();
   e.stopPropagation();
-  const now = e.timeStamp || performance.now();
-  if (now - lastExitTap <= DOUBLE_TAP_MS) {
-    lastExitTap = 0;
-    abortGame();
-  } else {
-    lastExitTap = now;
-  }
+  abortGame();
 });
 
 el("btn-again").addEventListener("click", () => startRound(state.lastCategory));
