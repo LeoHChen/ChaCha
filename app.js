@@ -237,9 +237,18 @@ let touchStartY = null;
 
 const gameScreen = screens.game;
 
+// Taps that start on the exit button must never be read as swipes.
+function onExitButton(target) {
+  return target && target.closest && target.closest("#btn-exit");
+}
+
 gameScreen.addEventListener(
   "touchstart",
   (e) => {
+    if (onExitButton(e.target)) {
+      touchStartY = null;
+      return;
+    }
     touchStartY = e.changedTouches[0].clientY;
   },
   { passive: true }
@@ -248,7 +257,7 @@ gameScreen.addEventListener(
 gameScreen.addEventListener(
   "touchend",
   (e) => {
-    if (touchStartY === null) return;
+    if (touchStartY === null || onExitButton(e.target)) return;
     const dy = e.changedTouches[0].clientY - touchStartY;
     touchStartY = null;
     if (Math.abs(dy) < SWIPE_THRESHOLD) return;
@@ -274,7 +283,23 @@ function abortGame() {
   show("menu");
 }
 
-el("btn-exit").addEventListener("click", abortGame);
+// Exit requires a double-tap (or double-click) so it can't be triggered by an
+// accidental single touch during play. Uses click events so it works with both
+// mouse and touch (native dblclick is unreliable on touch screens).
+const DOUBLE_TAP_MS = 450;
+let lastExitTap = 0;
+el("btn-exit").addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  const now = e.timeStamp || performance.now();
+  if (now - lastExitTap <= DOUBLE_TAP_MS) {
+    lastExitTap = 0;
+    abortGame();
+  } else {
+    lastExitTap = now;
+  }
+});
+
 el("btn-again").addEventListener("click", () => startRound(state.lastCategory));
 el("btn-menu").addEventListener("click", () => show("menu"));
 
