@@ -1,0 +1,13 @@
+{
+  "name": "Famous People",
+  "words": [
+    "Albert Einstein", "Michael Jackson", "Taylor Swift", "Barack Obama", "Beyoncé",
+    "Leonardo da Vinci", "Elvis Presley", "Oprah Winfrey", "Cristiano Ronaldo", "Lady Gaga",
+    "Abraham Lincoln", "Charlie Chaplin", "Marilyn Monroe", "Steve Jobs", "Serena Williams",
+    "Elon Musk", "William Shakespeare", "Nelson Mandela", "Lionel Messi", "Ariana Grande",
+    "Isaac Newton", "Walt Disney", "Mahatma Gandhi", "Adele", "Usain Bolt",
+    "Cleopatra", "Mozart", "Queen Elizabeth", "Michael Jordan", "Ed Sheeran",
+    "Napoleon", "Frida Kahlo", "David Beckham", "Rihanna", "Winston Churchill",
+    "Pablo Picasso", "Bruno Mars", "Neil Armstrong", "Dwayne Johnson", "Bill Gates"
+  ]
+}

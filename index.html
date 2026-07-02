@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#111111" />
+    <title>ChaCha — Charades</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎭</text></svg>" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Shown only in portrait: nudge the player to rotate. -->
+    <div id="rotate-gate">
+      <div class="rotate-inner">
+        <div class="rotate-icon">🔄</div>
+        <p>Rotate your phone to landscape to play</p>
+      </div>
+    </div>
+
+    <main id="app">
+      <!-- Category picker -->
+      <section id="screen-menu" class="screen">
+        <h1 class="logo">🎭 ChaCha</h1>
+        <p class="tagline">Pick a category, hold the phone up, and act it out.</p>
+        <div id="category-list" class="category-list"></div>
+      </section>
+
+      <!-- Active round -->
+      <section id="screen-game" class="screen hidden">
+        <div class="game-hud">
+          <span id="score" class="hud-item">✅ 0</span>
+          <span id="timer" class="hud-item">60</span>
+          <span id="skipped" class="hud-item">⏭️ 0</span>
+        </div>
+        <div id="word" class="word">Ready?</div>
+        <div class="game-hint">
+          <span>⬆️ swipe up to skip</span>
+          <span>⬇️ swipe down = got it</span>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section id="screen-end" class="screen hidden">
+        <h2 class="end-title">Time!</h2>
+        <div id="final-score" class="final-score">0</div>
+        <div class="results">
+          <div class="results-col">
+            <h3>✅ Got it</h3>
+            <ul id="got-list"></ul>
+          </div>
+          <div class="results-col">
+            <h3>⏭️ Skipped</h3>
+            <ul id="skipped-list"></ul>
+          </div>
+        </div>
+        <div class="end-actions">
+          <button id="btn-again" class="btn">Play again</button>
+          <button id="btn-menu" class="btn btn-secondary">Change category</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

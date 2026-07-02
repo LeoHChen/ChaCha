@@ -1,0 +1,13 @@
+{
+  "name": "Sports",
+  "words": [
+    "Soccer", "Basketball", "Tennis", "Golf", "Swimming",
+    "Boxing", "Baseball", "Skiing", "Surfing", "Volleyball",
+    "Cycling", "Bowling", "Archery", "Ice Hockey", "Karate",
+    "Gymnastics", "Table Tennis", "Rock Climbing", "Fishing", "Skateboarding",
+    "Cricket", "Rugby", "Fencing", "Badminton", "Horse Racing",
+    "Weightlifting", "Diving", "Wrestling", "Snowboarding", "Rowing",
+    "Marathon", "Figure Skating", "Pole Vault", "Sumo Wrestling", "Dodgeball",
+    "Hurdles", "Sailing", "Darts", "Curling", "Kayaking"
+  ]
+}

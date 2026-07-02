@@ -1,0 +1,49 @@
+name: Generate decks
+
+# Uses the ANTHROPIC_API_KEY secret to AI-generate word decks for any category
+# in categories.json that does not yet have one, then commits them back so they
+# are version-controlled and served as static files. The key never leaves CI.
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Regenerate every deck (overwrite existing)"
+        type: boolean
+        default: false
+  push:
+    branches:
+      - claude/charades-game-mvp-eg3u8g
+    paths:
+      - categories.json
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - run: npm ci
+
+      - name: Generate decks
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate.mjs ${{ (github.event_name == 'workflow_dispatch' && inputs.force) && '--force' || '' }}
+
+      - name: Commit new decks
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain decks)" ]; then
+            git add decks
+            git commit -m "Generate charades decks"
+            git push
+          else
+            echo "No deck changes to commit."
+          fi

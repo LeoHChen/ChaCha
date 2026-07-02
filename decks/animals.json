@@ -1,0 +1,13 @@
+{
+  "name": "Animals",
+  "words": [
+    "Elephant", "Kangaroo", "Penguin", "Giraffe", "Monkey",
+    "Snake", "Dolphin", "Eagle", "Lion", "Frog",
+    "Octopus", "Rabbit", "Horse", "Bear", "Owl",
+    "Crocodile", "Butterfly", "Spider", "Chicken", "Cow",
+    "Shark", "Turtle", "Bat", "Peacock", "Gorilla",
+    "Flamingo", "Hedgehog", "Sloth", "Camel", "Woodpecker",
+    "Jellyfish", "Kingfisher", "Chameleon", "Ostrich", "Squirrel",
+    "Bee", "Seal", "Zebra", "Wolf", "Crab"
+  ]
+}

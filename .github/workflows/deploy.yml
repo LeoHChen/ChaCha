@@ -1,0 +1,40 @@
+name: Deploy to GitHub Pages
+
+# Publishes the static site. Decks are already committed, so no secret is
+# needed here — this just uploads the files and deploys.
+on:
+  push:
+    branches:
+      - claude/charades-game-mvp-eg3u8g
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; let in-progress runs finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload the whole repo root; it is already a ready-to-serve static site.
+          path: .
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
