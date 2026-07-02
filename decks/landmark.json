@@ -1,0 +1,25 @@
+{
+  "name": "Landmark",
+  "words": [
+    "Eiffel Tower", "Statue of Liberty", "Great Wall of China", "Taj Mahal", "Colosseum",
+    "Big Ben", "Leaning Tower of Pisa", "Sydney Opera House", "Golden Gate Bridge", "Mount Rushmore",
+    "Christ the Redeemer", "Machu Picchu", "Pyramids of Giza", "Sphinx", "Stonehenge",
+    "Empire State Building", "Burj Khalifa", "Petronas Towers", "CN Tower", "Space Needle",
+    "Tower Bridge", "London Eye", "Buckingham Palace", "Arc de Triomphe", "Louvre",
+    "Notre-Dame", "Sacré-Cœur", "Sagrada Família", "Brandenburg Gate", "Neuschwanstein Castle",
+    "Acropolis", "Parthenon", "Trevi Fountain", "Vatican", "Sistine Chapel",
+    "St. Peter's Basilica", "Kremlin", "Red Square", "St. Basil's Cathedral", "Hagia Sophia",
+    "Blue Mosque", "Petra", "Mount Fuji", "Tokyo Tower", "Forbidden City",
+    "Terracotta Army", "Angkor Wat", "Grand Palace", "Marina Bay Sands", "Merlion",
+    "Gateway of India", "Golden Temple", "Wat Arun", "Uluru", "Table Mountain",
+    "Niagara Falls", "Grand Canyon", "Mount Everest", "Victoria Falls", "Iguazu Falls",
+    "Yellowstone", "Yosemite", "Times Square", "Hollywood Sign", "Las Vegas Strip",
+    "White House", "Lincoln Memorial", "Washington Monument", "Gateway Arch", "Alcatraz",
+    "Hoover Dam", "Golden Pavilion", "Chichen Itza", "Easter Island", "Panama Canal",
+    "Great Barrier Reef", "Mount Kilimanjaro", "Sahara Desert", "Amazon Rainforest", "Dead Sea",
+    "Meteora", "Palace of Versailles", "Windsor Castle", "Edinburgh Castle", "Mont-Saint-Michel",
+    "Alhambra", "Cologne Cathedral", "Charminar", "Lotus Temple", "Burj Al Arab",
+    "Willis Tower", "Chrysler Building", "One World Trade Center", "Brooklyn Bridge", "Sydney Harbour Bridge",
+    "Christ the King", "Moai Statues", "Pyramid of the Sun", "Angel Falls", "Ha Long Bay"
+  ]
+}

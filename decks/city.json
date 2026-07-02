@@ -1,0 +1,25 @@
+{
+  "name": "City",
+  "words": [
+    "New York", "Los Angeles", "Chicago", "Las Vegas", "Miami",
+    "San Francisco", "Seattle", "Boston", "Washington D.C.", "New Orleans",
+    "London", "Paris", "Rome", "Barcelona", "Madrid",
+    "Berlin", "Munich", "Amsterdam", "Venice", "Florence",
+    "Milan", "Vienna", "Prague", "Budapest", "Athens",
+    "Lisbon", "Dublin", "Edinburgh", "Zurich", "Geneva",
+    "Tokyo", "Osaka", "Kyoto", "Seoul", "Beijing",
+    "Shanghai", "Hong Kong", "Bangkok", "Singapore", "Kuala Lumpur",
+    "Mumbai", "New Delhi", "Dubai", "Istanbul", "Cairo",
+    "Cape Town", "Nairobi", "Marrakech", "Sydney", "Melbourne",
+    "Auckland", "Toronto", "Vancouver", "Montreal", "Mexico City",
+    "Rio de Janeiro", "São Paulo", "Buenos Aires", "Lima", "Bogotá",
+    "Santiago", "Havana", "Moscow", "Saint Petersburg", "Stockholm",
+    "Oslo", "Copenhagen", "Helsinki", "Reykjavik", "Warsaw",
+    "Brussels", "Monaco", "Nice", "Marseille", "Hamburg",
+    "Frankfurt", "Naples", "Dubrovnik", "Santorini", "Casablanca",
+    "Jerusalem", "Tel Aviv", "Doha", "Abu Dhabi", "Riyadh",
+    "Jakarta", "Manila", "Ho Chi Minh City", "Hanoi", "Taipei",
+    "Guangzhou", "Chengdu", "Xi'an", "Macau", "Honolulu",
+    "Atlanta", "Dallas", "Houston", "Philadelphia", "San Diego"
+  ]
+}

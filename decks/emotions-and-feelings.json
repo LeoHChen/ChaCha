@@ -1,0 +1,25 @@
+{
+  "name": "Emotions & Feelings",
+  "words": [
+    "Happy", "Sad", "Angry", "Excited", "Scared",
+    "Nervous", "Bored", "Confused", "Surprised", "Proud",
+    "Jealous", "Embarrassed", "Shy", "Lonely", "Grateful",
+    "Hopeful", "Frustrated", "Anxious", "Calm", "Relaxed",
+    "Curious", "Confident", "Disappointed", "Guilty", "Ashamed",
+    "Relieved", "Overwhelmed", "Content", "Cheerful", "Gloomy",
+    "Furious", "Terrified", "Delighted", "Miserable", "Ecstatic",
+    "Grumpy", "Playful", "Sleepy", "Exhausted", "Energetic",
+    "Amused", "Annoyed", "Heartbroken", "Homesick", "Loved",
+    "Peaceful", "Optimistic", "Pessimistic", "Sympathetic", "Suspicious",
+    "Determined", "Motivated", "Inspired", "Amazed", "Astonished",
+    "Disgusted", "Horrified", "Panicked", "Worried", "Stressed",
+    "Joyful", "Blissful", "Thrilled", "Giddy", "Hyper",
+    "Insecure", "Vulnerable", "Brave", "Courageous", "Cautious",
+    "Impatient", "Restless", "Satisfied", "Fulfilled", "Empty",
+    "Numb", "Shocked", "Startled", "Offended", "Betrayed",
+    "Regretful", "Nostalgic", "Sentimental", "Affectionate", "Tender",
+    "Bashful", "Timid", "Bold", "Fearless", "Reckless",
+    "Cranky", "Irritated", "Enraged", "Livid", "Bitter",
+    "Envious", "Smug", "Arrogant", "Humble", "Compassionate"
+  ]
+}

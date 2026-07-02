@@ -1,0 +1,25 @@
+{
+  "name": "Country",
+  "words": [
+    "United States", "China", "Japan", "India", "Brazil",
+    "Canada", "Mexico", "France", "Germany", "Italy",
+    "Spain", "United Kingdom", "Russia", "Australia", "South Korea",
+    "North Korea", "Argentina", "Egypt", "South Africa", "Nigeria",
+    "Kenya", "Morocco", "Turkey", "Greece", "Portugal",
+    "Netherlands", "Belgium", "Switzerland", "Sweden", "Norway",
+    "Denmark", "Finland", "Iceland", "Ireland", "Poland",
+    "Austria", "Hungary", "Czech Republic", "Ukraine", "Romania",
+    "Thailand", "Vietnam", "Indonesia", "Malaysia", "Singapore",
+    "Philippines", "Pakistan", "Bangladesh", "Sri Lanka", "Nepal",
+    "Saudi Arabia", "Iran", "Iraq", "Israel", "Jordan",
+    "Lebanon", "United Arab Emirates", "Qatar", "Kuwait", "Afghanistan",
+    "Chile", "Peru", "Colombia", "Venezuela", "Ecuador",
+    "Bolivia", "Uruguay", "Paraguay", "Cuba", "Jamaica",
+    "Haiti", "Panama", "Costa Rica", "Guatemala", "Honduras",
+    "Ethiopia", "Ghana", "Tanzania", "Uganda", "Zimbabwe",
+    "Algeria", "Tunisia", "Libya", "Sudan", "Madagascar",
+    "New Zealand", "Fiji", "Mongolia", "Kazakhstan", "Uzbekistan",
+    "Croatia", "Serbia", "Bulgaria", "Slovakia", "Slovenia",
+    "Cambodia", "Laos", "Myanmar", "Bhutan", "Maldives"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Brands",
+  "words": [
+    "Nike", "Adidas", "Coca-Cola", "Pepsi", "McDonald's",
+    "Apple", "Google", "Amazon", "Microsoft", "Samsung",
+    "Sony", "Netflix", "Disney", "Starbucks", "Ferrari",
+    "Lamborghini", "Toyota", "Tesla", "BMW", "Mercedes-Benz",
+    "Gucci", "Louis Vuitton", "Chanel", "Rolex", "Ikea",
+    "Lego", "Nintendo", "PlayStation", "Xbox", "Spotify",
+    "YouTube", "Instagram", "TikTok", "Facebook", "Twitter",
+    "Uber", "Airbnb", "Walmart", "Target", "Costco",
+    "Burger King", "KFC", "Subway", "Domino's", "Pizza Hut",
+    "Dunkin'", "Red Bull", "Gatorade", "Heinz", "Nestlé",
+    "Kellogg's", "Oreo", "Cadbury", "Hershey's", "Snickers",
+    "Kit Kat", "M&M's", "Doritos", "Pringles", "Lay's",
+    "Colgate", "Dove", "Gillette", "L'Oréal", "Nivea",
+    "Honda", "Ford", "Chevrolet", "Volkswagen", "Audi",
+    "Porsche", "Rolls-Royce", "Harley-Davidson", "Canon", "Nikon",
+    "Dell", "HP", "Intel", "Nvidia", "IBM",
+    "Puma", "Reebok", "Under Armour", "The North Face", "Levi's",
+    "H&M", "Zara", "Uniqlo", "Prada", "Versace",
+    "Ray-Ban", "GoPro", "Bose", "Twix", "Fanta",
+    "Sprite", "Nutella", "Lindt", "Ben & Jerry's", "Duracell"
+  ]
+}

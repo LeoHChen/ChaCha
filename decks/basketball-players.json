@@ -1,0 +1,25 @@
+{
+  "name": "Basketball Players",
+  "words": [
+    "Michael Jordan", "LeBron James", "Kobe Bryant", "Stephen Curry", "Kevin Durant",
+    "Shaquille O'Neal", "Magic Johnson", "Larry Bird", "Tim Duncan", "Kareem Abdul-Jabbar",
+    "Wilt Chamberlain", "Bill Russell", "Hakeem Olajuwon", "Charles Barkley", "Scottie Pippen",
+    "Dennis Rodman", "Allen Iverson", "Dwyane Wade", "Dirk Nowitzki", "Kevin Garnett",
+    "Paul Pierce", "Ray Allen", "Chris Paul", "Carmelo Anthony", "Russell Westbrook",
+    "James Harden", "Giannis Antetokounmpo", "Nikola Jokic", "Joel Embiid", "Luka Doncic",
+    "Kawhi Leonard", "Jimmy Butler", "Damian Lillard", "Anthony Davis", "Jayson Tatum",
+    "Devin Booker", "Ja Morant", "Zion Williamson", "Trae Young", "Donovan Mitchell",
+    "Kyrie Irving", "Klay Thompson", "Draymond Green", "Paul George", "Jrue Holiday",
+    "Bradley Beal", "DeMar DeRozan", "Rudy Gobert", "Ben Simmons", "Karl-Anthony Towns",
+    "Yao Ming", "Dikembe Mutombo", "Patrick Ewing", "David Robinson", "Karl Malone",
+    "John Stockton", "Reggie Miller", "Vince Carter", "Tracy McGrady", "Steve Nash",
+    "Jason Kidd", "Gary Payton", "Isiah Thomas", "Clyde Drexler", "Dominique Wilkins",
+    "Pau Gasol", "Manu Ginobili", "Tony Parker", "Chris Bosh", "Blake Griffin",
+    "Derrick Rose", "Andre Iguodala", "Rajon Rondo", "Chris Webber", "Grant Hill",
+    "Ben Wallace", "Rasheed Wallace", "Amar'e Stoudemire", "Baron Davis", "Jason Williams",
+    "Zach LaVine", "Bam Adebayo", "Domantas Sabonis", "Pascal Siakam", "Khris Middleton",
+    "CJ McCollum", "Andrew Wiggins", "Jamal Murray", "Tyrese Haliburton", "Anthony Edwards",
+    "Victor Wembanyama", "Shai Gilgeous-Alexander", "De'Aaron Fox", "Jaylen Brown", "Julius Randle",
+    "Kristaps Porzingis", "Deandre Ayton", "Fred VanVleet", "Mikal Bridges", "Evan Mobley"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Pokémon",
+  "words": [
+    "Pikachu", "Charizard", "Bulbasaur", "Squirtle", "Charmander",
+    "Eevee", "Mewtwo", "Mew", "Jigglypuff", "Snorlax",
+    "Gengar", "Gyarados", "Dragonite", "Lapras", "Vaporeon",
+    "Jolteon", "Flareon", "Machamp", "Alakazam", "Golem",
+    "Onix", "Geodude", "Psyduck", "Meowth", "Ditto",
+    "Magikarp", "Ekans", "Arbok", "Pidgey", "Pidgeot",
+    "Rattata", "Raticate", "Zubat", "Golbat", "Oddish",
+    "Vileplume", "Bellsprout", "Tentacruel", "Ponyta", "Rapidash",
+    "Slowpoke", "Magnemite", "Doduo", "Seel", "Grimer",
+    "Muk", "Cloyster", "Haunter", "Kingler", "Voltorb",
+    "Electrode", "Exeggutor", "Cubone", "Marowak", "Hitmonlee",
+    "Hitmonchan", "Lickitung", "Koffing", "Rhydon", "Chansey",
+    "Tangela", "Kangaskhan", "Seadra", "Goldeen", "Staryu",
+    "Starmie", "Scyther", "Jynx", "Electabuzz", "Magmar",
+    "Pinsir", "Tauros", "Omastar", "Porygon", "Omanyte",
+    "Kabuto", "Aerodactyl", "Articuno", "Zapdos", "Moltres",
+    "Dratini", "Dragonair", "Kabutops", "Wartortle", "Blastoise",
+    "Ivysaur", "Venusaur", "Charmeleon", "Butterfree", "Beedrill",
+    "Raichu", "Sandshrew", "Nidoking", "Nidoqueen", "Clefairy",
+    "Vulpix", "Ninetales", "Poliwag", "Poliwrath", "Abra"
+  ]
+}

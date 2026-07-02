@@ -18,7 +18,7 @@ import { dirname, join } from "node:path";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const DECKS_DIR = join(ROOT, "decks");
-const WORDS_PER_DECK = 40;
+const WORDS_PER_DECK = 100;
 const MODEL = "claude-haiku-4-5-20251001";
 
 const force = process.argv.includes("--force");
@@ -44,7 +44,7 @@ async function exists(path) {
 async function generateWords(client, category) {
   const message = await client.messages.create({
     model: MODEL,
-    max_tokens: 1024,
+    max_tokens: 4096,
     messages: [
       {
         role: "user",

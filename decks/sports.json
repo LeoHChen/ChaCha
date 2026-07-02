@@ -8,6 +8,18 @@
     "Cricket", "Rugby", "Fencing", "Badminton", "Horse Racing",
     "Weightlifting", "Diving", "Wrestling", "Snowboarding", "Rowing",
     "Marathon", "Figure Skating", "Pole Vault", "Sumo Wrestling", "Dodgeball",
-    "Hurdles", "Sailing", "Darts", "Curling", "Kayaking"
+    "Hurdles", "Sailing", "Darts", "Curling", "Kayaking",
+    "American Football", "Field Hockey", "Lacrosse", "Handball", "Water Polo",
+    "Softball", "Squash", "Racquetball", "Ping Pong", "Billiards",
+    "Snooker", "Judo", "Taekwondo", "Kickboxing", "Mixed Martial Arts",
+    "Arm Wrestling", "Powerlifting", "Bodybuilding", "CrossFit", "Triathlon",
+    "Long Jump", "High Jump", "Shot Put", "Discus", "Javelin",
+    "Sprinting", "Relay Race", "Cross Country", "Race Walking", "Decathlon",
+    "Speed Skating", "Bobsled", "Luge", "Skeleton", "Ski Jumping",
+    "Freestyle Skiing", "Slalom", "Biathlon", "Ice Climbing", "Mountaineering",
+    "Windsurfing", "Kitesurfing", "Wakeboarding", "Water Skiing", "Jet Skiing",
+    "Scuba Diving", "Snorkeling", "Canoeing", "Rafting", "Paddleboarding",
+    "BMX", "Motocross", "Formula 1", "NASCAR", "Rally Racing",
+    "Horseback Riding", "Polo", "Rodeo", "Bull Riding", "Cheerleading"
   ]
 }

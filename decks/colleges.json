@@ -1,0 +1,25 @@
+{
+  "name": "Colleges",
+  "words": [
+    "Harvard", "Stanford", "MIT", "Yale", "Princeton",
+    "Columbia", "University of Pennsylvania", "Brown", "Dartmouth", "Cornell",
+    "Caltech", "University of Chicago", "Duke", "Johns Hopkins", "Northwestern",
+    "UC Berkeley", "UCLA", "USC", "NYU", "Georgetown",
+    "Vanderbilt", "Rice", "Emory", "Notre Dame", "Carnegie Mellon",
+    "University of Michigan", "University of Virginia", "UNC Chapel Hill", "Georgia Tech", "UT Austin",
+    "University of Florida", "Ohio State", "Penn State", "Michigan State", "Purdue",
+    "University of Wisconsin", "University of Washington", "University of Illinois", "Boston University", "Boston College",
+    "Tufts", "Wake Forest", "William & Mary", "University of Miami", "Syracuse",
+    "University of Maryland", "Texas A&M", "University of Georgia", "Indiana University", "University of Arizona",
+    "Arizona State", "University of Colorado", "University of Oregon", "University of Utah", "University of Iowa",
+    "University of Minnesota", "Rutgers", "University of Pittsburgh", "Villanova", "Fordham",
+    "Oxford", "Cambridge", "Imperial College London", "London School of Economics", "University College London",
+    "University of Edinburgh", "University of Toronto", "McGill", "University of British Columbia", "ETH Zurich",
+    "Sorbonne", "Heidelberg", "Tsinghua", "Peking University", "University of Tokyo",
+    "National University of Singapore", "Seoul National University", "University of Sydney", "University of Melbourne", "Australian National University",
+    "Amherst", "Williams", "Swarthmore", "Wellesley", "Pomona",
+    "Bowdoin", "Middlebury", "Colgate", "Bates", "Colby",
+    "Baylor", "TCU", "SMU", "Tulane", "Pepperdine",
+    "Clemson", "Auburn", "University of Alabama", "LSU", "University of Kentucky"
+  ]
+}

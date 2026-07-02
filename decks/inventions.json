@@ -1,0 +1,25 @@
+{
+  "name": "Inventions",
+  "words": [
+    "Wheel", "Telephone", "Light Bulb", "Television", "Computer",
+    "Internet", "Airplane", "Automobile", "Steam Engine", "Printing Press",
+    "Camera", "Radio", "Refrigerator", "Microwave", "Washing Machine",
+    "Vacuum Cleaner", "Air Conditioner", "Telescope", "Microscope", "Compass",
+    "Clock", "Battery", "Elevator", "Escalator", "Bicycle",
+    "Motorcycle", "Helicopter", "Rocket", "Submarine", "Parachute",
+    "Umbrella", "Zipper", "Velcro", "Safety Pin", "Stapler",
+    "Pencil", "Ballpoint Pen", "Paper", "Eyeglasses", "Contact Lens",
+    "Thermometer", "Stethoscope", "X-Ray", "Vaccine", "Penicillin",
+    "Pacemaker", "Prosthetic Limb", "Wheelchair", "Hearing Aid", "Dentures",
+    "Gunpowder", "Dynamite", "Matches", "Lighter", "Fire Extinguisher",
+    "Sewing Machine", "Cotton Gin", "Tractor", "Chainsaw", "Drill",
+    "Hammer", "Screwdriver", "Saw", "Nail", "Screw",
+    "Transistor", "Microchip", "Laser", "Barcode", "GPS",
+    "Smartphone", "Tablet", "Laptop", "Mouse", "Keyboard",
+    "Printer", "Scanner", "Calculator", "Typewriter", "Telegraph",
+    "Phonograph", "Cassette Tape", "CD", "DVD", "USB Drive",
+    "Solar Panel", "Wind Turbine", "Electric Motor", "Generator", "Transformer",
+    "Toilet", "Shower", "Toothbrush", "Soap", "Dishwasher",
+    "Traffic Light", "Seat Belt", "Airbag", "Revolving Door", "Fireworks"
+  ]
+}

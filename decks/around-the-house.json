@@ -8,6 +8,18 @@
     "Iron", "Bookshelf", "Watering Can", "Clothes Hanger", "Stapler",
     "Dishwasher", "Fireplace", "Curtains", "Refrigerator", "Coat Rack",
     "Flashlight", "Nail Clippers", "Rolling Pin", "Spatula", "Doormat",
-    "Piggy Bank", "Wind Chime", "Corkscrew", "Dustpan", "Bath Towel"
+    "Piggy Bank", "Wind Chime", "Corkscrew", "Dustpan", "Bath Towel",
+    "Sofa", "Armchair", "Coffee Table", "Bed", "Wardrobe",
+    "Dresser", "Nightstand", "Lamp", "Chandelier", "Ceiling Fan",
+    "Microwave", "Oven", "Stove", "Sink", "Faucet",
+    "Cutting Board", "Colander", "Whisk", "Ladle", "Tongs",
+    "Grater", "Peeler", "Can Opener", "Measuring Cup", "Mixing Bowl",
+    "Plate", "Bowl", "Fork", "Spoon", "Knife",
+    "Mug", "Wine Glass", "Teapot", "Napkin", "Tablecloth",
+    "Pillowcase", "Blanket", "Bedsheet", "Comforter", "Rug",
+    "Toilet", "Bathtub", "Shower", "Soap", "Shampoo",
+    "Toilet Paper", "Toothpaste", "Razor", "Comb", "Sponge",
+    "Bucket", "Mop", "Trash Can", "Recycling Bin", "Laundry Basket",
+    "Hammer", "Screwdriver", "Wrench", "Tape Measure", "Duct Tape"
   ]
 }

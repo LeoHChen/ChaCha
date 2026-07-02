@@ -8,6 +8,18 @@
     "Shark", "Turtle", "Bat", "Peacock", "Gorilla",
     "Flamingo", "Hedgehog", "Sloth", "Camel", "Woodpecker",
     "Jellyfish", "Kingfisher", "Chameleon", "Ostrich", "Squirrel",
-    "Bee", "Seal", "Zebra", "Wolf", "Crab"
+    "Bee", "Seal", "Zebra", "Wolf", "Crab",
+    "Tiger", "Leopard", "Cheetah", "Panda", "Koala",
+    "Rhinoceros", "Hippopotamus", "Deer", "Moose", "Bison",
+    "Fox", "Raccoon", "Skunk", "Beaver", "Otter",
+    "Badger", "Porcupine", "Armadillo", "Anteater", "Platypus",
+    "Kookaburra", "Toucan", "Parrot", "Pelican", "Swan",
+    "Duck", "Goose", "Turkey", "Rooster", "Pigeon",
+    "Crow", "Robin", "Sparrow", "Hummingbird", "Vulture",
+    "Falcon", "Hawk", "Seagull", "Whale", "Orca",
+    "Walrus", "Starfish", "Seahorse", "Lobster", "Shrimp",
+    "Snail", "Worm", "Ant", "Grasshopper", "Ladybug",
+    "Dragonfly", "Mosquito", "Scorpion", "Centipede", "Caterpillar",
+    "Mouse", "Rat", "Hamster", "Guinea Pig", "Chinchilla"
   ]
 }

@@ -1,0 +1,25 @@
+{
+  "name": "Anime Series",
+  "words": [
+    "Naruto", "One Piece", "Dragon Ball Z", "Bleach", "Attack on Titan",
+    "Death Note", "My Hero Academia", "Demon Slayer", "Jujutsu Kaisen", "Fullmetal Alchemist",
+    "Hunter x Hunter", "Sword Art Online", "Tokyo Ghoul", "One Punch Man", "Fairy Tail",
+    "Black Clover", "Chainsaw Man", "Spy x Family", "Cowboy Bebop", "Neon Genesis Evangelion",
+    "Sailor Moon", "Pokémon", "Digimon", "Yu-Gi-Oh!", "Inuyasha",
+    "Code Geass", "Steins;Gate", "Re:Zero", "The Promised Neverland", "Vinland Saga",
+    "Mob Psycho 100", "Fire Force", "Dr. Stone", "Haikyuu!!", "Kuroko's Basketball",
+    "Blue Lock", "Assassination Classroom", "Soul Eater", "Gurren Lagann", "Berserk",
+    "JoJo's Bizarre Adventure", "Hellsing", "Trigun", "Samurai Champloo", "Ghost in the Shell",
+    "Akira", "Spirited Away", "My Neighbor Totoro", "Princess Mononoke", "Howl's Moving Castle",
+    "Your Name", "A Silent Voice", "Weathering With You", "Made in Abyss", "Overlord",
+    "That Time I Got Reincarnated as a Slime", "No Game No Life", "Konosuba", "The Rising of the Shield Hero", "Goblin Slayer",
+    "Dragon Ball", "Dragon Ball Super", "Boruto", "Gintama", "D.Gray-man",
+    "Fate/Stay Night", "Toradora!", "Clannad", "Angel Beats", "Anohana",
+    "Erased", "Parasyte", "Devilman Crybaby", "Elfen Lied", "Higurashi",
+    "Another", "Terror in Resonance", "Psycho-Pass", "Darling in the Franxx", "Guilty Crown",
+    "Nisekoi", "Kaguya-sama: Love Is War", "Horimiya", "Ouran High School Host Club", "Fruits Basket",
+    "Nichijou", "Lucky Star", "K-On!", "The Melancholy of Haruhi Suzumiya", "Bunny Girl Senpai",
+    "Vivy", "Chihayafuru", "Food Wars", "Yuri on Ice", "Free!",
+    "Cells at Work!", "Beastars", "Dorohedoro", "Cyberpunk Edgerunners", "Frieren"
+  ]
+}
