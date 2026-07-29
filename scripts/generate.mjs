@@ -25,6 +25,19 @@ const DECK_SIZES = {
   "Spanish": 300,
   "Colleges": 200,
 };
+// Per-category guidance so language/format categories generate correctly.
+const CATEGORY_HINTS = {
+  "Chinese":
+    "Write EVERY item in Simplified Chinese characters (never English or pinyin). " +
+    "Use everyday vocabulary for the normal deck; for hard mode use more advanced " +
+    "words and common four-character idioms (成语).",
+  "Spanish": "Write EVERY item in Spanish.",
+  "Mix":
+    "Use a varied grab-bag of well-known concepts, objects, actions, roles, or " +
+    "natural phenomena that can be acted out or drawn in charades — NOT obscure " +
+    "vocabulary words.",
+};
+
 const MODEL = "claude-haiku-4-5-20251001";
 
 const force = process.argv.includes("--force");
@@ -67,6 +80,7 @@ async function generateWords(client, category, hard) {
           `Generate exactly ${target} words or short phrases for a game of charades ` +
           `in the category "${category}". ` +
           difficulty +
+          (CATEGORY_HINTS[category] ? CATEGORY_HINTS[category] + " " : "") +
           `Each item must be fun to act out or describe and family-friendly. ` +
           `Prefer single words or two-word phrases. ` +
           `Respond with ONLY a JSON array of strings, no commentary, no code fences.`,
