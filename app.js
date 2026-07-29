@@ -7,10 +7,12 @@
 
 const DEFAULT_SECONDS = 120;
 const TIME_OPTIONS = [60, 90, 120, 180, 240, 280];
+const DIFFICULTY_OPTIONS = ["Easy", "Hard"];
 const READY_COUNTDOWN = 5; // seconds of prep time before the first word
 const SWIPE_THRESHOLD = 60; // px of vertical travel to count as a swipe
 const CATEGORIES_URL = "categories.json";
 const TIME_STORAGE_KEY = "chacha.roundSeconds";
+const DIFFICULTY_STORAGE_KEY = "chacha.difficulty";
 
 const el = (id) => document.getElementById(id);
 
@@ -69,6 +71,30 @@ function renderTimeOptions() {
   }
 }
 
+// ---- Settings: difficulty (persisted) ----
+function loadDifficulty() {
+  const saved = localStorage.getItem(DIFFICULTY_STORAGE_KEY);
+  return DIFFICULTY_OPTIONS.includes(saved) ? saved : "Easy";
+}
+
+let difficulty = loadDifficulty();
+
+function renderDifficultyOptions() {
+  const box = el("difficulty-options");
+  box.innerHTML = "";
+  for (const level of DIFFICULTY_OPTIONS) {
+    const btn = document.createElement("button");
+    btn.className = "time-btn" + (level === difficulty ? " selected" : "");
+    btn.textContent = level;
+    btn.addEventListener("click", () => {
+      difficulty = level;
+      localStorage.setItem(DIFFICULTY_STORAGE_KEY, level);
+      renderDifficultyOptions();
+    });
+    box.appendChild(btn);
+  }
+}
+
 // ---- Round state ----
 const state = {
   deck: [],
@@ -97,13 +123,31 @@ async function loadCategories() {
   }
 }
 
+// Load a category's words. In Hard mode, try the "-hard" deck first and fall
+// back to the normal deck if a hard one hasn't been generated yet.
+async function fetchDeckWords(category) {
+  const slug = slugify(category);
+  const urls =
+    difficulty === "Hard"
+      ? [`decks/${slug}-hard.json`, `decks/${slug}.json`]
+      : [`decks/${slug}.json`];
+  for (const url of urls) {
+    try {
+      const res = await fetch(url, { cache: "no-cache" });
+      if (res.ok) {
+        const words = (await res.json()).words;
+        if (Array.isArray(words) && words.length) return words;
+      }
+    } catch (err) {
+      /* try the next url */
+    }
+  }
+  return null;
+}
+
 async function startRound(category) {
-  let words;
-  try {
-    const res = await fetch(`decks/${slugify(category)}.json`, { cache: "no-cache" });
-    if (!res.ok) throw new Error(`deck missing (${res.status})`);
-    words = (await res.json()).words;
-  } catch (err) {
+  const words = await fetchDeckWords(category);
+  if (!words) {
     alert(`Could not load "${category}". The deck may not be generated yet.`);
     return;
   }
@@ -302,5 +346,6 @@ function tryLockLandscape() {
 }
 document.addEventListener("click", tryLockLandscape, { once: true });
 
+renderDifficultyOptions();
 renderTimeOptions();
 loadCategories();

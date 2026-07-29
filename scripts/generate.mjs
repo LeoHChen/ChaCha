@@ -47,9 +47,16 @@ async function exists(path) {
   }
 }
 
-async function generateWords(client, category) {
+async function generateWords(client, category, hard) {
   const target = DECK_SIZES[category] ?? WORDS_PER_DECK;
   const maxTokens = Math.min(8192, Math.max(2048, target * 14));
+  const difficulty = hard
+    ? `This is HARD MODE: choose more obscure, lesser-known, and challenging items ` +
+      `that are tougher to guess or act out — deep cuts and expert-level picks rather ` +
+      `than the obvious favorites. They must still be real, recognizable to fans or ` +
+      `enthusiasts of the topic, and family-friendly. For language categories, use more ` +
+      `advanced or less common vocabulary (and idioms where natural). `
+    : `Each item must be well-known and easy to recognize. `;
   const message = await client.messages.create({
     model: MODEL,
     max_tokens: maxTokens,
@@ -58,8 +65,10 @@ async function generateWords(client, category) {
         role: "user",
         content:
           `Generate exactly ${target} words or short phrases for a game of charades ` +
-          `in the category "${category}". Each item must be well-known, fun to act out or ` +
-          `describe, and family-friendly. Prefer single words or two-word phrases. ` +
+          `in the category "${category}". ` +
+          difficulty +
+          `Each item must be fun to act out or describe and family-friendly. ` +
+          `Prefer single words or two-word phrases. ` +
           `Respond with ONLY a JSON array of strings, no commentary, no code fences.`,
       },
     ],
@@ -103,24 +112,45 @@ async function main() {
   const categories = JSON.parse(await readFile(join(ROOT, "categories.json"), "utf8"));
   await mkdir(DECKS_DIR, { recursive: true });
 
+  // Each category has a normal deck and a "-hard" deck.
+  const variants = [
+    { suffix: "", hard: false, label: "" },
+    { suffix: "-hard", hard: true, label: " (Hard)" },
+  ];
+
   let generated = 0;
+  let failed = 0;
   for (const category of categories) {
     const slug = slugify(category);
-    const deckPath = join(DECKS_DIR, `${slug}.json`);
+    for (const v of variants) {
+      const deckPath = join(DECKS_DIR, `${slug}${v.suffix}.json`);
 
-    if (!force && (await exists(deckPath))) {
-      console.log(`✓ ${category} — deck already exists, skipping`);
-      continue;
+      if (!force && (await exists(deckPath))) {
+        console.log(`✓ ${category}${v.label} — deck already exists, skipping`);
+        continue;
+      }
+
+      console.log(`… ${category}${v.label} — generating`);
+      try {
+        const words = await generateWords(client, category, v.hard);
+        await writeFile(
+          deckPath,
+          JSON.stringify({ name: category + v.label, words }, null, 2) + "\n"
+        );
+        console.log(`✓ ${category}${v.label} — wrote ${words.length} words to decks/${slug}${v.suffix}.json`);
+        generated++;
+      } catch (err) {
+        // Don't fail the whole run over one deck; the frontend falls back to
+        // the normal deck when a hard deck is missing.
+        console.error(`✗ ${category}${v.label} — failed: ${err.message}`);
+        failed++;
+      }
     }
-
-    console.log(`… ${category} — generating`);
-    const words = await generateWords(client, category);
-    await writeFile(deckPath, JSON.stringify({ name: category, words }, null, 2) + "\n");
-    console.log(`✓ ${category} — wrote ${words.length} words to decks/${slug}.json`);
-    generated++;
   }
 
-  console.log(generated === 0 ? "\nAll decks already present." : `\nGenerated ${generated} deck(s).`);
+  console.log(
+    `\nGenerated ${generated} deck(s)` + (failed ? `, ${failed} failed.` : "." )
+  );
 }
 
 main().catch((err) => {

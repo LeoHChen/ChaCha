@@ -15,6 +15,7 @@ on:
       - claude/charades-game-mvp-eg3u8g
     paths:
       - categories.json
+      - scripts/generate.mjs
 
 permissions:
   contents: write
